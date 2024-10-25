@@ -1,6 +1,7 @@
 import "@/styles/globals.css";
 import clsx from "clsx";
 import { Metadata, Viewport } from "next";
+import Link from "next/link";
 
 import { Providers } from "./providers";
 
@@ -41,6 +42,9 @@ export default function RootLayout({
       >
         <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
           <div className="relative flex flex-col h-screen">
+            <header className="container mx-auto pt-8 max-w-7xl px-6 font-semibold">
+              <Link href="/">Next-blog</Link>
+            </header>
             <main className="container mx-auto max-w-7xl pt-16 px-6 flex-grow">
               {children}
             </main>
